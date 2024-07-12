@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iris Species Predictor</title>
+</head>
+<body>
+    <h1>Iris Species Predictor</h1>
+    <form action="{{ url_for('predict') }}" method="post">
+        <input type="text" name="sepal_length" placeholder="Sepal Length" required>
+        <input type="text" name="sepal_width" placeholder="Sepal Width" required>
+        <input type="text" name="petal_length" placeholder="Petal Length" required>
+        <input type="text" name="petal_width" placeholder="Petal Width" required>
+        <input type="submit" value="Predict">
+    </form>
+    <br>
+    {{ prediction_text }}
+</body>
+</html>
